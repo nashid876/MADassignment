@@ -1,16 +1,15 @@
-# hivetest1
+Project might require for you to upgrade/downgrade the gradle plugin.
+You can upgrade/downgrade the the android gradle plugin by right clicking on the android folder and  selecting open in android studio.
 
-A new Flutter project.
+Application might require for you to change your android ndk version. Android ndk version can be changed in the build.gradle file locateed at the app folder of the project
 
-## Getting Started
+example
+android {
+    namespace = "com.example.hivetest1"
+    compileSdk = flutter.compileSdkVersion
+    ndkVersion = "27.0.12077973" <= change ndk version here
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
